@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{tikz,amsmath,siunitx}
+\usetikzlibrary{arrows,decorations,backgrounds,patterns,matrix,shapes,fit,calc,shadows,plotmarks}
+\usepackage[graphics,tightpage,active]{preview}
+\usetikzlibrary{arrows.meta}
+
+\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{equation*}
+\newlength{\imagewidth}
+\newlength{\imagescale}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+% GNUPLOT required
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{tikzpicture}[
+		dot/.style={circle,minimum size=8pt}]
+		\coordinate (a0) at (0,0);
+		\coordinate (a1) at (1,0);
+		\coordinate (a2) at (2,0);
+		\coordinate (a3) at (3,0);
+		\coordinate (a4) at (4,0);
+		\coordinate (a5) at (5,0);
+		\coordinate (a6) at (6,0);
+		\coordinate (a7) at (7,0);
+		\coordinate (a8) at (8,0);
+		\coordinate (a9) at (9,0);
+		\coordinate (a10) at (10,0);
+		\coordinate (a11) at (11,0);
+		\coordinate (a12) at (12,0);
+		\coordinate (a13) at (13,0);
+		\coordinate (a14) at (14,0);
+		\coordinate (a15) at (15,0);
+		\coordinate (a16) at (16,0);
+		\coordinate (a17) at (17,0);
+		\coordinate (a18) at (18,0);
+		\coordinate (a19) at (19,0);
+		\coordinate (b1) at (0,0.500000);
+		\coordinate (b2) at (0,1.500000);
+		\coordinate (b3) at (0,2.500000);
+		\coordinate (b4) at (0,3.500000);
+		\coordinate (b5) at (0,4.500000);
+		\coordinate (b6) at (0,5.500000);
+		\draw[-latex][very thick] (-0.5,0) -- (20,0) node[below] {\small $F1$};
+		\draw[-latex][very thick] (0,-0) -- (0,7) node[above] {\small $Machine$};
+		\draw (a0) node [below]{0} -- ++(0, 3pt) ;
+		\draw (a1) node [below]{1} -- ++(0, 3pt) ;
+		\draw (a2) node [below]{2} -- ++(0, 3pt) ;
+		\draw (a3) node [below]{3} -- ++(0, 3pt) ;
+		\draw (a4) node [below]{4} -- ++(0, 3pt) ;
+		\draw (a5) node [below]{5} -- ++(0, 3pt) ;
+		\draw (a6) node [below]{6} -- ++(0, 3pt) ;
+		\draw (a7) node [below]{7} -- ++(0, 3pt) ;
+		\draw (a8) node [below]{8} -- ++(0, 3pt) ;
+		\draw (a9) node [below]{9} -- ++(0, 3pt) ;
+		\draw (a10) node [below]{10} -- ++(0, 3pt) ;
+		\draw (a11) node [below]{11} -- ++(0, 3pt) ;
+		\draw (a12) node [below]{12} -- ++(0, 3pt) ;
+		\draw (a13) node [below]{13} -- ++(0, 3pt) ;
+		\draw (a14) node [below]{14} -- ++(0, 3pt) ;
+		\draw (a15) node [below]{15} -- ++(0, 3pt) ;
+		\draw (a16) node [below]{16} -- ++(0, 3pt) ;
+		\draw (a17) node [below]{17} -- ++(0, 3pt) ;
+		\draw (a18) node [below]{18} -- ++(0, 3pt) ;
+		\draw (a19) node [below]{19} -- ++(0, 3pt) ;
+		\draw (b1) node [left]{$M_1$} -- ++(0, 3pt) ;
+		\draw (b2) node [left]{$M_2$} -- ++(0, 3pt) ;
+		\draw (b3) node [left]{$M_3$} -- ++(0, 3pt) ;
+		\draw (b4) node [left]{$M_4$} -- ++(0, 3pt) ;
+		\draw (b5) node [left]{$M_5$} -- ++(0, 3pt) ;
+		\draw (b6) node [left]{$M_6$} -- ++(0, 3pt) ;
+		\filldraw[fill = white!50][thick] (0,3) rectangle (3,3.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{10,1}$};
+		\filldraw[fill = purple!50][thick] (0,2) rectangle (3,2.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{8,1}$};
+		\filldraw[fill = white!50][thick] (3,0) rectangle (5,0.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{10,2}$};
+		\filldraw[fill = gray!50][thick] (0,4) rectangle (2,4.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{4,1}$};
+		\filldraw[fill = blue!50][thick] (0,5) rectangle (1,5.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{2,1}$};
+		\filldraw[fill = gray!50][thick] (2,5) rectangle (3,5.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{4,2}$};
+		\filldraw[fill = yellow!50][thick] (0,1) rectangle (2,1.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{1,1}$};
+		\filldraw[fill = gray!50][thick] (3,1) rectangle (9,1.750000) node[left, black, xshift=-66pt, yshift = -12pt] {\small $O_{4,3}$};
+		\filldraw[fill = purple!50][thick] (3,4) rectangle (5,4.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{8,2}$};
+		\filldraw[fill = yellow!50][thick] (3,2) rectangle (7,2.750000) node[left, black, xshift=-40pt, yshift = -12pt] {\small $O_{1,2}$};
+		\filldraw[fill = purple!50][thick] (5,0) rectangle (7,0.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{8,3}$};
+		\filldraw[fill = blue!50][thick] (3,5) rectangle (6,5.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{2,2}$};
+		\filldraw[fill = white!50][thick] (5,4) rectangle (8,4.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{10,3}$};
+		\filldraw[fill = white!50][thick] (8,3) rectangle (9,3.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{10,4}$};
+		\filldraw[fill = yellow!50][thick] (7,0) rectangle (8,0.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{1,3}$};
+		\filldraw[fill = gray!50][thick] (9,0) rectangle (10,0.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{4,4}$};
+		\filldraw[fill = gray!50][thick] (10,3) rectangle (15,3.750000) node[left, black, xshift=-53pt, yshift = -12pt] {\small $O_{4,5}$};
+		\filldraw[fill = gray!50][thick] (15,3) rectangle (16,3.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{4,6}$};
+		\filldraw[fill = blue!50][thick] (8,4) rectangle (10,4.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{2,3}$};
+		\filldraw[fill = blue!50][thick] (10,2) rectangle (13,2.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{2,4}$};
+		\filldraw[fill = yellow!50][thick] (9,1) rectangle (15,1.750000) node[left, black, xshift=-66pt, yshift = -12pt] {\small $O_{1,4}$};
+		\filldraw[fill = purple!50][thick] (7,5) rectangle (10,5.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{8,4}$};
+		\filldraw[fill = white!50][thick] (10,5) rectangle (13,5.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{10,5}$};
+		\filldraw[fill = blue!50][thick] (15,1) rectangle (16,1.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{2,5}$};
+		\filldraw[fill = white!50][thick] (13,5) rectangle (14,5.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{10,6}$};
+		\filldraw[fill = purple!50][thick] (10,4) rectangle (14,4.750000) node[left, black, xshift=-40pt, yshift = -12pt] {\small $O_{8,5}$};
+		\filldraw[fill = blue!50][thick] (16,1) rectangle (18,1.750000) node[left, black, xshift=-14pt, yshift = -12pt] {\small $O_{2,6}$};
+		\filldraw[fill = purple!50][thick] (14,5) rectangle (15,5.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{8,6}$};
+		\filldraw[fill = yellow!50][thick] (15,5) rectangle (18,5.750000) node[left, black, xshift=-27pt, yshift = -12pt] {\small $O_{1,5}$};
+		\filldraw[fill = yellow!50][thick] (18,1) rectangle (19,1.750000) node[left, black, xshift=-1pt, yshift = -12pt] {\small $O_{1,6}$};
+	\end{tikzpicture}
+
+\end{document}
