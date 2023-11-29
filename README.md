@@ -12,7 +12,10 @@
 % 行向量x
 x = [2	2	1	2	1	1	1	2	1	2	2	3	1	2	6	2	6	6	5	3 ... ];
 % 数据集路径p, 机器个数2, 结果保存路径sp
-bkg = readdata(p, 2, sp);
+sp = "";
+bkg = readdata(p, 2);
+% 修改x2Gantt.m的第2行sp的值
+x2Gantt(x, bkg, sp);
 ```
 
 **一些文献**
